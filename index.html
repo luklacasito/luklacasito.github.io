@@ -9,20 +9,23 @@
 
   <style>
     :root {
-      --ink: #14171f;
-      --ink-soft: #313947;
-      --navy: #06111f;
-      --navy-2: #0d2134;
-      --paper: #f5f2ea;
-      --paper-2: #ebe7dc;
-      --white: #fffdf8;
-      --line: rgba(20, 23, 31, 0.14);
-      --line-strong: rgba(20, 23, 31, 0.24);
-      --blue: #2f7c86;
-      --copper: #b97842;
-      --burgundy: #743040;
-      --steel: #587083;
-      --muted: #68717c;
+      --ink: #131b17;
+      --ink-soft: #27342e;
+      --navy: #07110d;
+      --navy-2: #0d241c;
+      --paper: #f2ecdd;
+      --paper-2: #e3d9c5;
+      --white: #fbf5e8;
+      --line: rgba(9, 67, 52, 0.18);
+      --line-strong: rgba(9, 67, 52, 0.34);
+      --blue: #0b5644;
+      --copper: #d2a64f;
+      --burgundy: #b45235;
+      --steel: #65726b;
+      --muted: #756e60;
+      --bezel: #084333;
+      --dial: #07120d;
+      --lume: #f7edd4;
       --sidebar-w: 244px;
       --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
@@ -40,7 +43,9 @@
 
     body {
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--paper);
+      background:
+        linear-gradient(180deg, rgba(242, 236, 221, 0.98), rgba(227, 217, 197, 0.98)),
+        var(--paper);
       color: var(--ink);
       line-height: 1.62;
       overflow-x: hidden;
@@ -51,7 +56,7 @@
     }
 
     ::selection {
-      background: rgba(183, 120, 66, 0.24);
+      background: rgba(210, 166, 79, 0.32);
     }
 
     .hero {
@@ -62,8 +67,8 @@
       padding: 104px 30px 86px;
       color: #f7f3ea;
       background:
-        linear-gradient(90deg, rgba(6, 17, 31, 0.95) 0%, rgba(6, 17, 31, 0.82) 32%, rgba(6, 17, 31, 0.46) 67%, rgba(6, 17, 31, 0.28) 100%),
-        linear-gradient(180deg, rgba(6, 17, 31, 0.22), rgba(6, 17, 31, 0.94)),
+        linear-gradient(90deg, rgba(7, 18, 13, 0.98) 0%, rgba(8, 67, 51, 0.88) 35%, rgba(8, 67, 51, 0.58) 66%, rgba(210, 166, 79, 0.16) 100%),
+        linear-gradient(180deg, rgba(7, 18, 13, 0.28), rgba(7, 18, 13, 0.94)),
         image-set(
           url("assets/hero-math-field-sharp.png") 1x,
           url("assets/hero-math-field-sharp@2x.png") 2x
@@ -77,8 +82,8 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px);
+        linear-gradient(rgba(247, 237, 212, 0.034) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(210, 166, 79, 0.028) 1px, transparent 1px);
       background-size: 88px 88px;
       mask-image: linear-gradient(90deg, black, transparent 78%);
     }
@@ -93,14 +98,14 @@
       pointer-events: none;
       background: linear-gradient(
         180deg,
-        rgba(245, 242, 234, 0) 0%,
-        rgba(245, 242, 234, 0.02) 12%,
-        rgba(245, 242, 234, 0.07) 24%,
-        rgba(245, 242, 234, 0.16) 36%,
-        rgba(245, 242, 234, 0.30) 49%,
-        rgba(245, 242, 234, 0.48) 62%,
-        rgba(245, 242, 234, 0.68) 75%,
-        rgba(245, 242, 234, 0.86) 88%,
+        rgba(242, 236, 221, 0) 0%,
+        rgba(242, 236, 221, 0.02) 12%,
+        rgba(242, 236, 221, 0.08) 24%,
+        rgba(242, 236, 221, 0.18) 36%,
+        rgba(242, 236, 221, 0.34) 49%,
+        rgba(242, 236, 221, 0.55) 62%,
+        rgba(242, 236, 221, 0.74) 75%,
+        rgba(242, 236, 221, 0.90) 88%,
         var(--paper) 100%
       );
     }
@@ -117,7 +122,7 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 10px;
-      color: rgba(247, 243, 234, 0.72);
+      color: rgba(247, 237, 212, 0.78);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.16em;
@@ -151,7 +156,7 @@
       max-width: 720px;
       font-size: clamp(1.08rem, 2vw, 1.32rem);
       line-height: 1.58;
-      color: rgba(247, 243, 234, 0.82);
+      color: rgba(247, 237, 212, 0.86);
       margin-bottom: 28px;
     }
 
@@ -167,22 +172,22 @@
       align-items: center;
       min-height: 42px;
       padding: 10px 15px;
-      border: 1px solid rgba(247, 243, 234, 0.18);
+      border: 1px solid rgba(247, 237, 212, 0.20);
       border-radius: 6px;
-      color: #f9f5ee;
+      color: var(--lume);
       text-decoration: none;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.02em;
-      background: rgba(6, 17, 31, 0.22);
+      background: rgba(7, 18, 13, 0.34);
       backdrop-filter: blur(10px);
       transition: transform 0.18s var(--ease), border-color 0.18s var(--ease), background 0.18s var(--ease);
     }
 
     .hero-actions a:hover {
       transform: translateY(-2px);
-      border-color: rgba(183, 120, 66, 0.82);
-      background: rgba(183, 120, 66, 0.16);
+      border-color: rgba(210, 166, 79, 0.88);
+      background: rgba(8, 67, 51, 0.52);
     }
 
     .layout {
@@ -259,7 +264,7 @@
     .sidebar-links a {
       color: var(--ink-soft);
       text-decoration: underline;
-      text-decoration-color: rgba(88, 112, 131, 0.28);
+      text-decoration-color: rgba(8, 67, 51, 0.28);
       text-underline-offset: 3px;
     }
 
@@ -320,7 +325,7 @@
     .intro {
       font-size: 17px;
       line-height: 1.72;
-      color: #29313b;
+      color: var(--ink-soft);
       max-width: 780px;
     }
 
@@ -336,10 +341,10 @@
       align-items: center;
       min-height: 32px;
       padding: 7px 10px;
-      border: 1px solid rgba(20, 23, 31, 0.11);
+      border: 1px solid rgba(8, 67, 51, 0.18);
       border-radius: 6px;
-      background: rgba(255, 253, 248, 0.62);
-      color: #303a45;
+      background: rgba(251, 245, 232, 0.72);
+      color: var(--ink-soft);
       font-size: 13px;
       font-weight: 650;
     }
@@ -397,7 +402,9 @@
     .skill-card {
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: var(--white);
+      background:
+        linear-gradient(180deg, rgba(251, 245, 232, 0.94), rgba(242, 236, 221, 0.90)),
+        var(--white);
     }
 
     .research-card {
@@ -425,7 +432,7 @@
     .contact-list a {
       color: var(--blue);
       text-decoration: underline;
-      text-decoration-color: rgba(47, 124, 134, 0.28);
+      text-decoration-color: rgba(8, 67, 51, 0.30);
       text-underline-offset: 3px;
     }
 
@@ -473,6 +480,7 @@
       width: 7px;
       height: 7px;
       border: 1px solid var(--copper);
+      background: rgba(210, 166, 79, 0.18);
       border-radius: 50%;
     }
 
@@ -504,7 +512,7 @@
     }
 
     .skill-card h3 {
-      color: var(--burgundy);
+      color: var(--bezel);
       margin-bottom: 6px;
     }
 
@@ -584,7 +592,7 @@
         width: 100%;
         margin: 0 0 30px;
         padding: 10px 18px 9px;
-        background: rgba(245, 242, 234, 0.92);
+        background: rgba(242, 236, 221, 0.94);
         border-bottom: 1px solid var(--line);
         backdrop-filter: blur(16px);
       }
@@ -625,14 +633,14 @@
         padding: 7px 10px;
         border: 1px solid var(--line);
         border-radius: 6px;
-        background: rgba(255, 253, 248, 0.75);
+        background: rgba(251, 245, 232, 0.78);
         line-height: 1;
         white-space: nowrap;
       }
 
       nav a.active {
-        border-color: rgba(183, 120, 66, 0.46);
-        background: rgba(183, 120, 66, 0.12);
+        border-color: rgba(210, 166, 79, 0.54);
+        background: rgba(8, 67, 51, 0.10);
       }
 
       section {
