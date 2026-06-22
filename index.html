@@ -399,7 +399,8 @@
 
     .research-card,
     .paper-card,
-    .skill-card {
+    .skill-card,
+    .hobby-card {
       border: 1px solid var(--line);
       border-radius: 8px;
       background:
@@ -413,7 +414,8 @@
 
     .research-card h3,
     .paper-card h3,
-    .skill-card h3 {
+    .skill-card h3,
+    .hobby-card h3 {
       font-size: 16px;
       line-height: 1.35;
       margin-bottom: 8px;
@@ -421,7 +423,8 @@
 
     .research-card p,
     .paper-card p,
-    .skill-card p {
+    .skill-card p,
+    .hobby-card p {
       font-size: 14.4px;
       line-height: 1.62;
       margin: 0;
@@ -429,6 +432,7 @@
 
     .research-card a,
     .paper-card a,
+    .hobby-card a,
     .contact-list a {
       color: var(--blue);
       text-decoration: underline;
@@ -438,6 +442,7 @@
 
     .research-card a:hover,
     .paper-card a:hover,
+    .hobby-card a:hover,
     .contact-list a:hover {
       text-decoration-color: var(--copper);
     }
@@ -514,6 +519,52 @@
     .skill-card h3 {
       color: var(--bezel);
       margin-bottom: 6px;
+    }
+
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(280px, 1.12fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .hobby-card {
+      min-width: 0;
+      padding: 18px;
+    }
+
+    .hobby-card h3 {
+      color: var(--bezel);
+    }
+
+    .hobby-card p {
+      width: auto;
+      max-width: none;
+    }
+
+    .hobby-card + .hobby-card {
+      margin-top: 12px;
+    }
+
+    .villa-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .villa-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .villa-card figcaption {
+      padding: 12px 14px 14px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
     }
 
     .honor-list {
@@ -649,6 +700,7 @@
 
       .research-stack,
       .skills-grid,
+      .hobbies-grid,
       .contact-list {
         grid-template-columns: 1fr;
       }
@@ -714,6 +766,7 @@
       .paper-list,
       .skills-grid,
       .focus-list,
+      .hobbies-grid,
       .honor-list,
       .contact-list {
         width: min(22rem, calc(100vw - 36px));
@@ -784,6 +837,7 @@
           <li><a class="nav-link" href="#presentations">Presentations</a></li>
           <li><a class="nav-link" href="#skills">Skills</a></li>
           <li><a class="nav-link" href="#honors">Honors</a></li>
+          <li><a class="nav-link" href="#hobbies">Hobbies</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -1117,6 +1171,35 @@
             <span class="honor-year">2017</span>
             <span class="honor-name">Gold CREST Award, Jaguar Land Rover research</span>
           </div>
+        </div>
+      </section>
+
+      <section id="hobbies">
+        <div class="section-heading">
+          <h2>Hobbies</h2>
+          <span class="section-tag">Away From The Desk</span>
+        </div>
+        <div class="hobbies-grid">
+          <div>
+            <article class="hobby-card">
+              <h3>Chess</h3>
+              <p>
+                I play chess online on Lichess as
+                <a href="https://lichess.org/@/lucasindus" target="_blank" rel="noopener">lucasindus</a>.
+              </p>
+            </article>
+            <article class="hobby-card">
+              <h3>Football</h3>
+              <p>
+                I am a Barcelona fan and an Asturiano, so David Villa sits in a very natural
+                intersection of loyalties.
+              </p>
+            </article>
+          </div>
+          <figure class="hobby-card villa-card">
+            <img src="assets/villa.jpg" alt="Lucas Fernandez Sarmiento with David Villa on a beach in Asturias" />
+            <figcaption>With David Villa, Asturian legend and Barcelona great.</figcaption>
+          </figure>
         </div>
       </section>
 
