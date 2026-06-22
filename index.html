@@ -13,17 +13,17 @@
       --ink-soft: #22372c;
       --navy: #050f0a;
       --navy-2: #0b2317;
-      --paper: #edf0df;
-      --paper-2: #d6dcc4;
-      --white: #f9f3e4;
-      --line: rgba(4, 87, 52, 0.22);
-      --line-strong: rgba(4, 87, 52, 0.42);
-      --blue: #075f43;
-      --green: #075f43;
-      --green-deep: #043822;
-      --green-soft: #a9c49a;
-      --leaf: #0c7046;
-      --variegation: #e7ead0;
+      --paper: #eef0dc;
+      --paper-2: #d8dec1;
+      --white: #fbf2df;
+      --line: rgba(36, 95, 53, 0.24);
+      --line-strong: rgba(36, 95, 53, 0.46);
+      --blue: #2d6f3e;
+      --green: #2d6f3e;
+      --green-deep: #173f25;
+      --green-soft: #becd92;
+      --leaf: #3f8346;
+      --variegation: #ede8c6;
       --copper: #c79b45;
       --burgundy: #9d4c33;
       --wood: #8d6138;
@@ -32,7 +32,7 @@
       --metal-dark: #68706b;
       --steel: #617267;
       --muted: #696f5b;
-      --bezel: #045734;
+      --bezel: #245f35;
       --dial: #06150d;
       --lume: #f3efd5;
       --sidebar-w: 244px;
@@ -54,8 +54,8 @@
       position: relative;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at 84% 12%, rgba(7, 95, 67, 0.30), transparent 28rem),
-        radial-gradient(circle at 9% 46%, rgba(169, 196, 154, 0.28), transparent 24rem),
+        radial-gradient(circle at 84% 12%, rgba(45, 111, 62, 0.30), transparent 28rem),
+        radial-gradient(circle at 9% 46%, rgba(190, 205, 146, 0.28), transparent 24rem),
         linear-gradient(135deg, rgba(74, 44, 26, 0.10), transparent 34%),
         linear-gradient(180deg, rgba(237, 240, 223, 0.98), rgba(214, 220, 196, 0.98)),
         var(--paper);
@@ -73,7 +73,7 @@
       background:
         linear-gradient(115deg, transparent 0 24%, rgba(141, 97, 56, 0.10) 24.2% 25%, transparent 25.2% 100%),
         repeating-linear-gradient(96deg, rgba(74, 44, 26, 0.026) 0 1px, transparent 1px 18px),
-        repeating-linear-gradient(0deg, rgba(4, 87, 52, 0.035) 0 1px, transparent 1px 72px);
+        repeating-linear-gradient(0deg, rgba(36, 95, 53, 0.035) 0 1px, transparent 1px 72px);
       opacity: 0.86;
       mix-blend-mode: multiply;
     }
@@ -97,7 +97,7 @@
         radial-gradient(circle, transparent 0 23%, rgba(237, 240, 223, 0.92) 24% 31%, transparent 32%),
         radial-gradient(circle, transparent 0 49%, rgba(104, 112, 107, 0.55) 50% 54%, transparent 55%),
         repeating-conic-gradient(from 0deg, rgba(194, 197, 184, 0.58) 0 8deg, transparent 8deg 15deg),
-        conic-gradient(from 18deg, rgba(7, 95, 67, 0.22), rgba(199, 155, 69, 0.20), rgba(194, 197, 184, 0.30), rgba(7, 95, 67, 0.22));
+        conic-gradient(from 18deg, rgba(45, 111, 62, 0.22), rgba(199, 155, 69, 0.20), rgba(194, 197, 184, 0.30), rgba(45, 111, 62, 0.22));
       mask-image: radial-gradient(circle, transparent 0 18%, black 19% 70%, transparent 71%);
       animation: gear-turn var(--gear-speed, 48s) linear infinite;
     }
@@ -108,7 +108,7 @@
       position: absolute;
       inset: 19%;
       border-radius: 50%;
-      border: 1px solid rgba(4, 87, 52, 0.24);
+      border: 1px solid rgba(36, 95, 53, 0.24);
     }
 
     .gear::after {
@@ -153,10 +153,10 @@
         radial-gradient(ellipse at 28% 30%, rgba(231, 234, 208, 0.96) 0 12%, transparent 13%),
         radial-gradient(ellipse at 68% 42%, rgba(231, 234, 208, 0.82) 0 13%, transparent 14%),
         radial-gradient(ellipse at 45% 68%, rgba(231, 234, 208, 0.70) 0 9%, transparent 10%),
-        radial-gradient(ellipse at 23% 62%, transparent 0 9%, rgba(9, 98, 58, 0.82) 10%),
-        radial-gradient(ellipse at 77% 66%, transparent 0 10%, rgba(9, 98, 58, 0.84) 11%),
+        radial-gradient(ellipse at 23% 62%, transparent 0 9%, rgba(52, 125, 67, 0.82) 10%),
+        radial-gradient(ellipse at 77% 66%, transparent 0 10%, rgba(52, 125, 67, 0.84) 11%),
         linear-gradient(92deg, rgba(231, 234, 208, 0.68) 0 7%, transparent 7.5% 100%),
-        linear-gradient(135deg, rgba(169, 196, 154, 0.42), rgba(5, 80, 46, 0.78));
+        linear-gradient(135deg, rgba(190, 205, 146, 0.42), rgba(30, 81, 42, 0.78));
       clip-path: polygon(50% 0, 63% 9%, 77% 8%, 75% 23%, 92% 28%, 80% 43%, 98% 57%, 78% 64%, 85% 82%, 66% 77%, 50% 100%, 35% 78%, 16% 84%, 23% 65%, 3% 58%, 20% 44%, 8% 29%, 25% 23%, 22% 8%, 38% 10%);
       animation: leaf-sway var(--leaf-speed, 18s) ease-in-out infinite alternate;
     }
@@ -218,7 +218,7 @@
       transform: rotate(18deg);
       background:
         repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.30) 0 1px, transparent 1px 11px),
-        linear-gradient(90deg, rgba(104, 112, 107, 0.08), rgba(194, 197, 184, 0.70), rgba(7, 95, 67, 0.10));
+        linear-gradient(90deg, rgba(104, 112, 107, 0.08), rgba(194, 197, 184, 0.70), rgba(45, 111, 62, 0.10));
     }
 
     @keyframes gear-turn {
@@ -261,8 +261,8 @@
       padding: 104px 30px 86px;
       color: #f7f3ea;
       background:
-        radial-gradient(circle at 78% 18%, rgba(169, 196, 154, 0.24), transparent 24rem),
-        linear-gradient(90deg, rgba(5, 15, 10, 0.98) 0%, rgba(4, 87, 52, 0.92) 36%, rgba(7, 95, 67, 0.66) 66%, rgba(199, 155, 69, 0.18) 100%),
+        radial-gradient(circle at 78% 18%, rgba(190, 205, 146, 0.24), transparent 24rem),
+        linear-gradient(90deg, rgba(5, 15, 10, 0.98) 0%, rgba(36, 95, 53, 0.92) 36%, rgba(45, 111, 62, 0.66) 66%, rgba(199, 155, 69, 0.18) 100%),
         linear-gradient(180deg, rgba(5, 15, 10, 0.22), rgba(5, 15, 10, 0.94)),
         image-set(
           url("assets/hero-math-field-sharp.png") 1x,
@@ -384,7 +384,7 @@
     .hero-actions a:hover {
       transform: translateY(-2px);
       border-color: rgba(210, 166, 79, 0.88);
-      background: rgba(8, 67, 51, 0.52);
+      background: rgba(36, 95, 53, 0.52);
     }
 
     .layout {
@@ -404,7 +404,7 @@
       position: sticky;
       top: 24px;
       padding: 14px 14px 16px;
-      border: 1px solid rgba(4, 87, 52, 0.18);
+      border: 1px solid rgba(36, 95, 53, 0.18);
       border-radius: 8px;
       background:
         linear-gradient(180deg, rgba(249, 243, 228, 0.74), rgba(237, 240, 223, 0.58)),
@@ -454,7 +454,7 @@
 
     nav a.active {
       font-weight: 700;
-      text-shadow: 0 0 18px rgba(7, 95, 67, 0.18);
+      text-shadow: 0 0 18px rgba(45, 111, 62, 0.18);
     }
 
     .sidebar-links {
@@ -470,7 +470,7 @@
     .sidebar-links a {
       color: var(--ink-soft);
       text-decoration: underline;
-      text-decoration-color: rgba(8, 67, 51, 0.28);
+      text-decoration-color: rgba(36, 95, 53, 0.28);
       text-underline-offset: 3px;
     }
 
@@ -497,7 +497,7 @@
       padding-bottom: 12px;
       margin-bottom: 24px;
       background:
-        linear-gradient(90deg, rgba(7, 95, 67, 0.10), rgba(199, 155, 69, 0.045), transparent 68%);
+        linear-gradient(90deg, rgba(45, 111, 62, 0.10), rgba(199, 155, 69, 0.045), transparent 68%);
     }
 
     h2 {
@@ -537,50 +537,193 @@
       max-width: 780px;
     }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
+    .about-drawer {
       margin: 22px 0 24px;
-    }
-
-    .about-card {
-      min-width: 0;
-      padding: 14px 14px 15px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background:
-        linear-gradient(135deg, rgba(7, 95, 67, 0.10), transparent 45%),
-        linear-gradient(180deg, rgba(249, 243, 228, 0.91), rgba(237, 240, 223, 0.86)),
+        radial-gradient(circle at 92% 12%, rgba(190, 205, 146, 0.24), transparent 10rem),
+        linear-gradient(135deg, rgba(45, 111, 62, 0.12), transparent 45%),
+        linear-gradient(180deg, rgba(251, 242, 223, 0.93), rgba(238, 240, 220, 0.88)),
         var(--white);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.54);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.58),
+        0 18px 40px rgba(28, 59, 33, 0.06);
+      overflow: hidden;
     }
 
-    .about-card h3 {
-      margin-bottom: 7px;
+    .about-drawer > summary,
+    .about-folder > summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .about-drawer > summary::-webkit-details-marker,
+    .about-folder > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .about-drawer > summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+      padding: 16px 18px;
+    }
+
+    .drawer-title {
+      display: block;
       color: var(--bezel);
-      font-size: 14px;
+      font-size: 15px;
+      font-weight: 800;
       line-height: 1.25;
     }
 
-    .about-card p {
-      width: auto;
-      max-width: none;
-      margin: 0;
-      color: var(--ink-soft);
-      font-size: 13.4px;
-      line-height: 1.55;
+    .drawer-kicker {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .about-card a {
+    .drawer-toggle,
+    .folder-toggle {
+      position: relative;
+      display: inline-flex;
+      width: 26px;
+      height: 26px;
+      border: 1px solid rgba(36, 95, 53, 0.28);
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg, rgba(194, 197, 184, 0.36), rgba(251, 242, 223, 0.58)),
+        rgba(45, 111, 62, 0.08);
+      flex: 0 0 auto;
+    }
+
+    .drawer-toggle::before,
+    .drawer-toggle::after,
+    .folder-toggle::before,
+    .folder-toggle::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 10px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--bezel);
+      transform: translate(-50%, -50%);
+      transition: transform 0.18s var(--ease), opacity 0.18s var(--ease);
+    }
+
+    .drawer-toggle::after,
+    .folder-toggle::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .about-drawer[open] > summary .drawer-toggle::after,
+    .about-folder[open] > summary .folder-toggle::after {
+      opacity: 0;
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    .about-drawer-body {
+      border-top: 1px solid var(--line);
+      padding: 0 18px 18px;
+    }
+
+    .about-folder {
+      border-bottom: 1px solid rgba(36, 95, 53, 0.18);
+    }
+
+    .about-folder:last-child {
+      border-bottom: 0;
+    }
+
+    .about-folder > summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 0;
+    }
+
+    .folder-title {
+      display: block;
+      color: var(--bezel);
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .folder-meta {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .folder-toggle {
+      width: 22px;
+      height: 22px;
+    }
+
+    .about-folder-content {
+      padding: 0 0 16px;
+    }
+
+    .about-folder-content p {
+      width: auto;
+      max-width: none;
+      margin: 0 0 10px;
+      color: var(--ink-soft);
+      font-size: 13.8px;
+      line-height: 1.62;
+    }
+
+    .about-folder-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-folder-content a {
       color: var(--blue);
       text-decoration: underline;
-      text-decoration-color: rgba(8, 67, 51, 0.30);
+      text-decoration-color: rgba(36, 95, 53, 0.30);
       text-underline-offset: 3px;
     }
 
-    .about-card a:hover {
+    .about-folder-content a:hover {
       text-decoration-color: var(--copper);
+    }
+
+    .about-villa {
+      max-width: 360px;
+      margin: 12px 0 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(251, 242, 223, 0.84);
+      overflow: hidden;
+    }
+
+    .about-villa img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .about-villa figcaption {
+      padding: 10px 12px 11px;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
     }
 
     .focus-list {
@@ -595,10 +738,10 @@
       align-items: center;
       min-height: 32px;
       padding: 7px 10px;
-      border: 1px solid rgba(8, 67, 51, 0.18);
+      border: 1px solid rgba(36, 95, 53, 0.18);
       border-radius: 6px;
       background:
-        linear-gradient(180deg, rgba(249, 243, 228, 0.76), rgba(169, 196, 154, 0.16)),
+        linear-gradient(180deg, rgba(249, 243, 228, 0.76), rgba(190, 205, 146, 0.16)),
         rgba(251, 245, 232, 0.72);
       color: var(--ink-soft);
       font-size: 13px;
@@ -655,13 +798,12 @@
 
     .research-card,
     .paper-card,
-    .skill-card,
-    .hobby-card {
+    .skill-card {
       border: 1px solid var(--line);
       border-radius: 8px;
       background:
-        radial-gradient(circle at 88% 14%, rgba(169, 196, 154, 0.18), transparent 8rem),
-        linear-gradient(135deg, rgba(7, 95, 67, 0.075), transparent 42%),
+        radial-gradient(circle at 88% 14%, rgba(190, 205, 146, 0.18), transparent 8rem),
+        linear-gradient(135deg, rgba(45, 111, 62, 0.075), transparent 42%),
         linear-gradient(180deg, rgba(249, 243, 228, 0.94), rgba(237, 240, 223, 0.90)),
         var(--white);
       box-shadow:
@@ -675,8 +817,7 @@
 
     .research-card h3,
     .paper-card h3,
-    .skill-card h3,
-    .hobby-card h3 {
+    .skill-card h3 {
       font-size: 16px;
       line-height: 1.35;
       margin-bottom: 8px;
@@ -684,8 +825,7 @@
 
     .research-card p,
     .paper-card p,
-    .skill-card p,
-    .hobby-card p {
+    .skill-card p {
       font-size: 14.4px;
       line-height: 1.62;
       margin: 0;
@@ -693,17 +833,15 @@
 
     .research-card a,
     .paper-card a,
-    .hobby-card a,
     .contact-list a {
       color: var(--blue);
       text-decoration: underline;
-      text-decoration-color: rgba(8, 67, 51, 0.30);
+      text-decoration-color: rgba(36, 95, 53, 0.30);
       text-underline-offset: 3px;
     }
 
     .research-card a:hover,
     .paper-card a:hover,
-    .hobby-card a:hover,
     .contact-list a:hover {
       text-decoration-color: var(--copper);
     }
@@ -780,52 +918,6 @@
     .skill-card h3 {
       color: var(--bezel);
       margin-bottom: 6px;
-    }
-
-    .hobbies-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.88fr) minmax(280px, 1.12fr);
-      gap: 14px;
-      align-items: stretch;
-    }
-
-    .hobby-card {
-      min-width: 0;
-      padding: 18px;
-    }
-
-    .hobby-card h3 {
-      color: var(--bezel);
-    }
-
-    .hobby-card p {
-      width: auto;
-      max-width: none;
-    }
-
-    .hobby-card + .hobby-card {
-      margin-top: 12px;
-    }
-
-    .villa-card {
-      overflow: hidden;
-      padding: 0;
-    }
-
-    .villa-card img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      object-position: center;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .villa-card figcaption {
-      padding: 12px 14px 14px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
     }
 
     .honor-list {
@@ -954,7 +1046,7 @@
 
       nav a.active {
         border-color: rgba(210, 166, 79, 0.54);
-        background: rgba(7, 95, 67, 0.14);
+        background: rgba(45, 111, 62, 0.14);
       }
 
       section {
@@ -963,8 +1055,6 @@
 
       .research-stack,
       .skills-grid,
-      .about-grid,
-      .hobbies-grid,
       .contact-list {
         grid-template-columns: 1fr;
       }
@@ -1052,9 +1142,8 @@
       .research-stack,
       .paper-list,
       .skills-grid,
-      .about-grid,
       .focus-list,
-      .hobbies-grid,
+      .about-drawer,
       .honor-list,
       .contact-list {
         width: min(22rem, calc(100vw - 36px));
@@ -1074,10 +1163,28 @@
       }
 
       .focus-list span,
-      .about-card,
+      .about-drawer,
+      .about-folder,
       .research-card,
       .paper-card,
       .skill-card {
+        max-width: 100%;
+      }
+
+      .about-drawer > summary {
+        grid-template-columns: minmax(0, 1fr) auto;
+        padding: 14px 15px;
+      }
+
+      .about-drawer-body {
+        padding: 0 15px 15px;
+      }
+
+      .drawer-kicker {
+        letter-spacing: 0.06em;
+      }
+
+      .about-villa {
         max-width: 100%;
       }
 
@@ -1136,7 +1243,6 @@
           <li><a class="nav-link" href="#presentations">Presentations</a></li>
           <li><a class="nav-link" href="#skills">Skills</a></li>
           <li><a class="nav-link" href="#honors">Honors</a></li>
-          <li><a class="nav-link" href="#hobbies">Hobbies</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -1167,27 +1273,72 @@
           effective field theory. Expected PhD completion: August 2027; available to start September 2027.
         </p>
 
-        <div class="about-grid" aria-label="Personal interests">
-          <article class="about-card">
-            <h3>Asturias</h3>
-            <p>Asturian roots, northern Spain, and a strong attachment to the coast, mountains, and home.</p>
-          </article>
-          <article class="about-card">
-            <h3>Football</h3>
-            <p>Barcelona fan, with David Villa as the natural bridge between Barca and Asturias.</p>
-          </article>
-          <article class="about-card">
-            <h3>Chess</h3>
-            <p>
-              I play online on Lichess as
-              <a href="https://lichess.org/@/lucasindus" target="_blank" rel="noopener">lucasindus</a>.
-            </p>
-          </article>
-          <article class="about-card">
-            <h3>Horology</h3>
-            <p>Interested in mechanical watches, tool-watch design, and travel-time complications.</p>
-          </article>
-        </div>
+        <details class="about-drawer" open>
+          <summary>
+            <span>
+              <span class="drawer-title">About Me Folders</span>
+              <span class="drawer-kicker">Asturias · Football · Chess · Horology</span>
+            </span>
+            <span class="drawer-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="about-drawer-body">
+            <details class="about-folder">
+              <summary>
+                <span>
+                  <span class="folder-title">Asturias</span>
+                  <span class="folder-meta">Home</span>
+                </span>
+                <span class="folder-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="about-folder-content">
+                <p>Asturian roots, northern Spain, and a strong attachment to the coast, mountains, and home.</p>
+              </div>
+            </details>
+            <details class="about-folder">
+              <summary>
+                <span>
+                  <span class="folder-title">Football</span>
+                  <span class="folder-meta">Barcelona and Asturias</span>
+                </span>
+                <span class="folder-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="about-folder-content">
+                <p>I am a Barcelona fan and an Asturiano, so David Villa sits in a very natural intersection of loyalties.</p>
+                <figure class="about-villa">
+                  <img src="assets/villa.jpg" alt="Lucas Fernandez Sarmiento with David Villa on a beach in Asturias" />
+                  <figcaption>With David Villa, Asturian legend and Barcelona great.</figcaption>
+                </figure>
+              </div>
+            </details>
+            <details class="about-folder">
+              <summary>
+                <span>
+                  <span class="folder-title">Chess</span>
+                  <span class="folder-meta">Lichess</span>
+                </span>
+                <span class="folder-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="about-folder-content">
+                <p>
+                  I play online on Lichess as
+                  <a href="https://lichess.org/@/lucasindus" target="_blank" rel="noopener">lucasindus</a>.
+                </p>
+              </div>
+            </details>
+            <details class="about-folder">
+              <summary>
+                <span>
+                  <span class="folder-title">Horology</span>
+                  <span class="folder-meta">Watches and materials</span>
+                </span>
+                <span class="folder-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="about-folder-content">
+                <p>Interested in mechanical watches, tool-watch design, travel-time complications, warm green dials, brushed steel, wood tones, and precise small mechanisms.</p>
+              </div>
+            </details>
+          </div>
+        </details>
 
         <div class="focus-list" aria-label="Research focus areas">
           <span>Statistical mechanics of deep learning</span>
@@ -1492,35 +1643,6 @@
             <span class="honor-year">2017</span>
             <span class="honor-name">Gold CREST Award, Jaguar Land Rover research</span>
           </div>
-        </div>
-      </section>
-
-      <section id="hobbies">
-        <div class="section-heading">
-          <h2>Hobbies</h2>
-          <span class="section-tag">Away From The Desk</span>
-        </div>
-        <div class="hobbies-grid">
-          <div>
-            <article class="hobby-card">
-              <h3>Chess</h3>
-              <p>
-                I play chess online on Lichess as
-                <a href="https://lichess.org/@/lucasindus" target="_blank" rel="noopener">lucasindus</a>.
-              </p>
-            </article>
-            <article class="hobby-card">
-              <h3>Football</h3>
-              <p>
-                I am a Barcelona fan and an Asturiano, so David Villa sits in a very natural
-                intersection of loyalties.
-              </p>
-            </article>
-          </div>
-          <figure class="hobby-card villa-card">
-            <img src="assets/villa.jpg" alt="Lucas Fernandez Sarmiento with David Villa on a beach in Asturias" />
-            <figcaption>With David Villa, Asturian legend and Barcelona great.</figcaption>
-          </figure>
         </div>
       </section>
 
