@@ -329,6 +329,50 @@
       max-width: 780px;
     }
 
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 22px 0 24px;
+    }
+
+    .about-card {
+      min-width: 0;
+      padding: 14px 14px 15px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, rgba(251, 245, 232, 0.90), rgba(242, 236, 221, 0.84)),
+        var(--white);
+    }
+
+    .about-card h3 {
+      margin-bottom: 7px;
+      color: var(--bezel);
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .about-card p {
+      width: auto;
+      max-width: none;
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 13.4px;
+      line-height: 1.55;
+    }
+
+    .about-card a {
+      color: var(--blue);
+      text-decoration: underline;
+      text-decoration-color: rgba(8, 67, 51, 0.30);
+      text-underline-offset: 3px;
+    }
+
+    .about-card a:hover {
+      text-decoration-color: var(--copper);
+    }
+
     .focus-list {
       display: flex;
       flex-wrap: wrap;
@@ -700,6 +744,7 @@
 
       .research-stack,
       .skills-grid,
+      .about-grid,
       .hobbies-grid,
       .contact-list {
         grid-template-columns: 1fr;
@@ -765,6 +810,7 @@
       .research-stack,
       .paper-list,
       .skills-grid,
+      .about-grid,
       .focus-list,
       .hobbies-grid,
       .honor-list,
@@ -786,6 +832,7 @@
       }
 
       .focus-list span,
+      .about-card,
       .research-card,
       .paper-card,
       .skill-card {
@@ -828,7 +875,7 @@
 
       <nav aria-label="Section navigation">
         <ul>
-          <li><a class="nav-link active" href="#profile">Profile</a></li>
+          <li><a class="nav-link active" href="#profile">About</a></li>
           <li><a class="nav-link" href="#education">Education</a></li>
           <li><a class="nav-link" href="#research">Research</a></li>
           <li><a class="nav-link" href="#experience">Experience</a></li>
@@ -852,8 +899,8 @@
     <main>
       <section id="profile">
         <div class="section-heading">
-          <h2>Profile</h2>
-          <span class="section-tag">Summary</span>
+          <h2>About Me</h2>
+          <span class="section-tag">Profile</span>
         </div>
         <p class="intro">
           I am a machine-learning researcher and PhD candidate in theoretical physics at Carnegie Mellon.
@@ -867,6 +914,28 @@
           multi-agent LLM aggregation, tensor-network simulation, forecasting, optimization, and
           effective field theory. Expected PhD completion: August 2027; available to start September 2027.
         </p>
+
+        <div class="about-grid" aria-label="Personal interests">
+          <article class="about-card">
+            <h3>Asturias</h3>
+            <p>Asturian roots, northern Spain, and a strong attachment to the coast, mountains, and home.</p>
+          </article>
+          <article class="about-card">
+            <h3>Football</h3>
+            <p>Barcelona fan, with David Villa as the natural bridge between Barca and Asturias.</p>
+          </article>
+          <article class="about-card">
+            <h3>Chess</h3>
+            <p>
+              I play online on Lichess as
+              <a href="https://lichess.org/@/lucasindus" target="_blank" rel="noopener">lucasindus</a>.
+            </p>
+          </article>
+          <article class="about-card">
+            <h3>Horology</h3>
+            <p>Interested in mechanical watches, tool-watch design, and travel-time complications.</p>
+          </article>
+        </div>
 
         <div class="focus-list" aria-label="Research focus areas">
           <span>Statistical mechanics of deep learning</span>
