@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lucas Fernandez Sarmiento is a machine-learning researcher and theoretical physics PhD candidate at Carnegie Mellon University." />
+  <title>Lucas Fernandez Sarmiento</title>
+  <link rel="preload" href="assets/hero-math-field-sharp@2x.png" as="image" />
+
+  <style>
+    :root {
+      --ink: #14171f;
+      --ink-soft: #313947;
+      --navy: #06111f;
+      --navy-2: #0d2134;
+      --paper: #f5f2ea;
+      --paper-2: #ebe7dc;
+      --white: #fffdf8;
+      --line: rgba(20, 23, 31, 0.14);
+      --line-strong: rgba(20, 23, 31, 0.24);
+      --blue: #2f7c86;
+      --copper: #b97842;
+      --burgundy: #743040;
+      --steel: #587083;
+      --muted: #68717c;
+      --sidebar-w: 244px;
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.62;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    ::selection {
+      background: rgba(183, 120, 66, 0.24);
+    }
+
+    .hero {
+      min-height: 76svh;
+      position: relative;
+      display: grid;
+      align-items: center;
+      padding: 104px 30px 86px;
+      color: #f7f3ea;
+      background:
+        linear-gradient(90deg, rgba(6, 17, 31, 0.95) 0%, rgba(6, 17, 31, 0.82) 32%, rgba(6, 17, 31, 0.46) 67%, rgba(6, 17, 31, 0.28) 100%),
+        linear-gradient(180deg, rgba(6, 17, 31, 0.22), rgba(6, 17, 31, 0.94)),
+        image-set(
+          url("assets/hero-math-field-sharp.png") 1x,
+          url("assets/hero-math-field-sharp@2x.png") 2x
+        ) center / cover no-repeat;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px);
+      background-size: 88px 88px;
+      mask-image: linear-gradient(90deg, black, transparent 78%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: min(52svh, 560px);
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(245, 242, 234, 0) 0%,
+        rgba(245, 242, 234, 0.02) 12%,
+        rgba(245, 242, 234, 0.07) 24%,
+        rgba(245, 242, 234, 0.16) 36%,
+        rgba(245, 242, 234, 0.30) 49%,
+        rgba(245, 242, 234, 0.48) 62%,
+        rgba(245, 242, 234, 0.68) 75%,
+        rgba(245, 242, 234, 0.86) 88%,
+        var(--paper) 100%
+      );
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 1140px);
+      margin: 0 auto;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: rgba(247, 243, 234, 0.72);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-kicker::before {
+      content: "";
+      width: 32px;
+      flex: 0 0 32px;
+      height: 1px;
+      background: var(--copper);
+    }
+
+    .hero h1 {
+      max-width: 680px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.35rem, 5vw, 4.6rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: 0;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      display: block;
+    }
+
+    .hero-lede {
+      max-width: 720px;
+      font-size: clamp(1.08rem, 2vw, 1.32rem);
+      line-height: 1.58;
+      color: rgba(247, 243, 234, 0.82);
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 0;
+    }
+
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 10px 15px;
+      border: 1px solid rgba(247, 243, 234, 0.18);
+      border-radius: 6px;
+      color: #f9f5ee;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      background: rgba(6, 17, 31, 0.22);
+      backdrop-filter: blur(10px);
+      transition: transform 0.18s var(--ease), border-color 0.18s var(--ease), background 0.18s var(--ease);
+    }
+
+    .hero-actions a:hover {
+      transform: translateY(-2px);
+      border-color: rgba(183, 120, 66, 0.82);
+      background: rgba(183, 120, 66, 0.16);
+    }
+
+    .layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 46px;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      padding: 58px 28px 84px;
+    }
+
+    .sidebar {
+      width: var(--sidebar-w);
+      flex-shrink: 0;
+      position: sticky;
+      top: 24px;
+      padding: 8px 0 0;
+    }
+
+    .identity {
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 20px;
+    }
+
+    .identity-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      line-height: 1.18;
+      margin-bottom: 8px;
+    }
+
+    .identity-role {
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    nav a {
+      display: block;
+      padding: 5px 0;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.15s var(--ease);
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--ink);
+    }
+
+    nav a.active {
+      font-weight: 700;
+    }
+
+    .sidebar-links {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: 13.5px;
+    }
+
+    .sidebar-links a {
+      color: var(--ink-soft);
+      text-decoration: underline;
+      text-decoration-color: rgba(88, 112, 131, 0.28);
+      text-underline-offset: 3px;
+    }
+
+    .sidebar-links a:hover {
+      text-decoration-color: var(--copper);
+    }
+
+    main {
+      flex: 1;
+      min-width: 0;
+    }
+
+    section {
+      scroll-margin-top: 34px;
+      margin-bottom: 70px;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: end;
+      border-bottom: 1px solid var(--line-strong);
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.7rem, 3vw, 2.25rem);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .section-tag {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    p {
+      color: var(--ink-soft);
+      font-size: 15.5px;
+      line-height: 1.75;
+      margin-bottom: 14px;
+      overflow-wrap: break-word;
+    }
+
+    p strong {
+      color: var(--ink);
+      font-weight: 750;
+    }
+
+    .intro {
+      font-size: 17px;
+      line-height: 1.72;
+      color: #29313b;
+      max-width: 780px;
+    }
+
+    .focus-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .focus-list span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 7px 10px;
+      border: 1px solid rgba(20, 23, 31, 0.11);
+      border-radius: 6px;
+      background: rgba(255, 253, 248, 0.62);
+      color: #303a45;
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr);
+      gap: 28px;
+      padding: 19px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .when {
+      color: var(--muted);
+      font-size: 13px;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.45;
+    }
+
+    .item-title {
+      font-size: 16px;
+      font-weight: 780;
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+
+    .item-meta {
+      color: var(--steel);
+      font-size: 13.5px;
+      line-height: 1.48;
+      margin-bottom: 8px;
+    }
+
+    .item-text {
+      color: var(--ink-soft);
+      font-size: 14.8px;
+      line-height: 1.68;
+      margin: 0;
+    }
+
+    .research-stack {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .research-card,
+    .paper-card,
+    .skill-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .research-card {
+      padding: 18px 18px 17px;
+    }
+
+    .research-card h3,
+    .paper-card h3,
+    .skill-card h3 {
+      font-size: 16px;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+
+    .research-card p,
+    .paper-card p,
+    .skill-card p {
+      font-size: 14.4px;
+      line-height: 1.62;
+      margin: 0;
+    }
+
+    .research-card a,
+    .paper-card a,
+    .contact-list a {
+      color: var(--blue);
+      text-decoration: underline;
+      text-decoration-color: rgba(47, 124, 134, 0.28);
+      text-underline-offset: 3px;
+    }
+
+    .research-card a:hover,
+    .paper-card a:hover,
+    .contact-list a:hover {
+      text-decoration-color: var(--copper);
+    }
+
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      gap: 26px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-item ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-top: 12px;
+    }
+
+    .experience-item li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--ink-soft);
+      font-size: 14.7px;
+      line-height: 1.6;
+    }
+
+    .experience-item li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.66em;
+      width: 7px;
+      height: 7px;
+      border: 1px solid var(--copper);
+      border-radius: 50%;
+    }
+
+    .paper-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .paper-card {
+      padding: 16px 18px;
+    }
+
+    .paper-meta {
+      color: var(--muted);
+      font-size: 13.3px;
+      line-height: 1.55;
+      margin-bottom: 6px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .skill-card {
+      padding: 16px 17px;
+    }
+
+    .skill-card h3 {
+      color: var(--burgundy);
+      margin-bottom: 6px;
+    }
+
+    .honor-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .honor-row {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 20px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: baseline;
+    }
+
+    .honor-year {
+      color: var(--muted);
+      font-size: 13.5px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .honor-name {
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .contact-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 28px;
+      border-top: 1px solid var(--line);
+      margin-top: 18px;
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14.5px;
+    }
+
+    .contact-label {
+      color: var(--muted);
+    }
+
+    footer {
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      padding: 30px 28px 42px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        min-height: auto;
+        padding: 72px 18px 58px;
+      }
+
+      .layout {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 0 60px;
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        width: 100%;
+        margin: 0 0 30px;
+        padding: 10px 18px 9px;
+        background: rgba(245, 242, 234, 0.92);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(16px);
+      }
+
+      main {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 18px;
+        overflow: hidden;
+      }
+
+      .identity,
+      .sidebar-links {
+        display: none;
+      }
+
+      nav ul {
+        flex-direction: row;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 2px 0 4px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      nav ul::-webkit-scrollbar {
+        display: none;
+      }
+
+      nav li {
+        flex: 0 0 auto;
+      }
+
+      nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: rgba(255, 253, 248, 0.75);
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      nav a.active {
+        border-color: rgba(183, 120, 66, 0.46);
+        background: rgba(183, 120, 66, 0.12);
+      }
+
+      section {
+        scroll-margin-top: 70px;
+      }
+
+      .research-stack,
+      .skills-grid,
+      .contact-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hero {
+        padding-top: 56px;
+        background-position: 62% center;
+      }
+
+      .hero-inner,
+      .hero h1,
+      .hero-lede {
+        width: min(22rem, calc(100vw - 36px));
+        max-width: min(22rem, calc(100vw - 36px));
+      }
+
+      .hero-inner {
+        margin: 0;
+      }
+
+      .hero-kicker {
+        max-width: 100%;
+        font-size: 10px;
+        letter-spacing: 0.11em;
+        margin-bottom: 16px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.15rem, 11vw, 3.05rem);
+      }
+
+      .hero-lede {
+        max-width: 100%;
+        font-size: 1rem;
+      }
+
+      .hero-actions {
+        gap: 8px;
+        margin-bottom: 0;
+      }
+
+      .hero-actions a {
+        min-height: 38px;
+        padding: 9px 11px;
+        font-size: 12.5px;
+      }
+
+      .section-heading {
+        width: min(22rem, calc(100vw - 36px));
+        max-width: min(22rem, calc(100vw - 36px));
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      main section,
+      main p,
+      .intro,
+      .timeline,
+      .experience-list,
+      .research-stack,
+      .paper-list,
+      .skills-grid,
+      .focus-list,
+      .honor-list,
+      .contact-list {
+        width: min(22rem, calc(100vw - 36px));
+        max-width: min(22rem, calc(100vw - 36px));
+      }
+
+      .section-tag {
+        white-space: normal;
+      }
+
+      .timeline-item,
+      .experience-item,
+      .honor-row,
+      .contact-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .focus-list span,
+      .research-card,
+      .paper-card,
+      .skill-card {
+        max-width: 100%;
+      }
+
+      .experience-item {
+        gap: 8px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <p class="hero-kicker">Physics · Machine Learning · AI Systems</p>
+      <h1><span>Lucas Fernandez</span><span>Sarmiento</span></h1>
+      <p class="hero-lede">
+        I study high-dimensional learning systems with statistical mechanics, mean-field theory,
+        probabilistic modeling, and large-scale Python experiments.
+      </p>
+      <div class="hero-actions" aria-label="Profile links">
+        <a href="mailto:lucasf@andrew.cmu.edu">Email</a>
+        <a href="assets/lucas-fernandez-sarmiento-cv-may-2026.pdf">CV</a>
+        <a href="https://inspirehep.net/authors/2963953" target="_blank" rel="noopener">INSPIRE</a>
+        <a href="https://scholar.google.com/citations?view_op=search_authors&amp;mauthors=Lucas+Fernandez+Sarmiento&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.linkedin.com/in/lucasfernandezsarmiento" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="identity">
+        <p class="identity-name">Lucas Fernandez Sarmiento</p>
+        <p class="identity-role">Machine-learning researcher<br>PhD Candidate, Theoretical Physics<br>Carnegie Mellon University</p>
+      </div>
+
+      <nav aria-label="Section navigation">
+        <ul>
+          <li><a class="nav-link active" href="#profile">Profile</a></li>
+          <li><a class="nav-link" href="#education">Education</a></li>
+          <li><a class="nav-link" href="#research">Research</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#publications">Publications</a></li>
+          <li><a class="nav-link" href="#presentations">Presentations</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#honors">Honors</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-links">
+        <a href="https://orcid.org/0009-0005-3776-421X" target="_blank" rel="noopener">ORCID 0009-0005-3776-421X</a>
+        <a href="https://inspirehep.net/authors/2963953" target="_blank" rel="noopener">INSPIRE profile</a>
+        <a href="assets/lucas-fernandez-sarmiento-cv-may-2026.pdf">Download CV</a>
+      </div>
+    </aside>
+
+    <main>
+      <section id="profile">
+        <div class="section-heading">
+          <h2>Profile</h2>
+          <span class="section-tag">Summary</span>
+        </div>
+        <p class="intro">
+          I am a machine-learning researcher and PhD candidate in theoretical physics at Carnegie Mellon.
+          My work sits where statistical mechanics, signal propagation, probabilistic modeling,
+          and large-scale experiments meet: I use mathematical structure to understand and improve
+          modern learning systems.
+        </p>
+        <p>
+          I am the single author of an ICML 2026 paper on dropout universality and compute-efficient
+          scheduling, validated across MLPs, ResNets, and Vision Transformers. I also work on robust
+          multi-agent LLM aggregation, tensor-network simulation, forecasting, optimization, and
+          effective field theory. Expected PhD completion: August 2027; available to start September 2027.
+        </p>
+
+        <div class="focus-list" aria-label="Research focus areas">
+          <span>Statistical mechanics of deep learning</span>
+          <span>Mean-field theory</span>
+          <span>Edge-of-chaos dynamics</span>
+          <span>Dropout universality</span>
+          <span>Robust LLM debate</span>
+          <span>Tensor networks</span>
+          <span>Forecasting and backtesting</span>
+          <span>Constrained optimization</span>
+          <span>Gravitational EFTs</span>
+        </div>
+
+      </section>
+
+      <section id="education">
+        <div class="section-heading">
+          <h2>Education</h2>
+          <span class="section-tag">Training</span>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="when">2022-present<br>expected Aug 2027</div>
+            <div>
+              <h3 class="item-title">Carnegie Mellon University</h3>
+              <p class="item-meta">PhD Candidate, Theoretical Physics · GPA 4.00/4.00</p>
+              <p class="item-text">Research in neural-network dynamics, mean-field theory, robust AI debate, tensor-network simulations, and gravitational effective field theory. Advisors: Riccardo Penco and Rachel A. Rosen.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="when">2021-2022</div>
+            <div>
+              <h3 class="item-title">Imperial College London</h3>
+              <p class="item-meta">MSc, Theoretical Physics · Distinction</p>
+              <p class="item-text">I completed graduate training in theoretical physics with a focus on advanced mathematical methods and field-theory foundations.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="when">2018-2021</div>
+            <div>
+              <h3 class="item-title">Imperial College London</h3>
+              <p class="item-meta">BSc, Theoretical Physics · First Class · Dean&rsquo;s List</p>
+              <p class="item-text">I completed a First Class degree in theoretical physics, built my foundation in mathematical physics and scientific computing, and was named to the Dean&rsquo;s List in 2019 and 2020.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="research">
+        <div class="section-heading">
+          <h2>Research</h2>
+          <span class="section-tag">Selected Threads</span>
+        </div>
+        <div class="research-stack">
+          <article class="research-card">
+            <h3>Dropout universality and scheduling</h3>
+            <p>
+              Derived a mean-field theory of dropout in stochastic neural-network dynamics, predicting
+              activation-dependent scaling laws and depth-dependent schedules. With the objective of
+              conserving signal propagation, these schedules outperform standard constant dropout in both
+              accuracy and loss, achieving up to 35.4% lower test loss and 65% lower compute cost at matched
+              accuracy across MLP, ResNet, and ViT models on CIFAR-10/100.
+              <a href="https://arxiv.org/abs/2605.21648" target="_blank" rel="noopener">Read the paper</a>.
+            </p>
+          </article>
+          <article class="research-card">
+            <h3>Robust AI debate and aggregation</h3>
+            <p>
+              Built experiments for adversarial LLM debate under asymmetric information, comparing majority
+              vote, linear pooling, logarithmic pooling, Hedge-style updates, and cost-accuracy Pareto
+              frontiers. Pooled weaker-model ensembles achieved higher accuracy at approximately 70% lower
+              inference cost.
+            </p>
+          </article>
+          <article class="research-card">
+            <h3>Tensor networks and scientific computing</h3>
+            <p>
+              Built Python workflows for large-scale tensor-network simulations with Prof. Tarnopolsky,
+              running DMRG experiments with scaling analysis and convergence diagnostics for lattice-model
+              observables.
+            </p>
+          </article>
+          <article class="research-card">
+            <h3>Effective field theory and gravity</h3>
+            <p>
+              Developed symmetry-based EFT constructions using coset methods, tensor calculus, and algebraic
+              geometry, with applications to entropy bounds for irrelevant operators, broken Weyl gravity,
+              generalized Proca theory, and vector torsion.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="section-heading">
+          <h2>Experience</h2>
+          <span class="section-tag">Research and Applied Work</span>
+        </div>
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="when">Aug 2022-present<br>Pittsburgh, PA</div>
+            <div>
+              <h3 class="item-title">PhD Researcher</h3>
+              <p class="item-meta">Carnegie Mellon University · Advisors: Riccardo Penco and Rachel A. Rosen</p>
+              <ul>
+                <li>Built large-scale PyTorch experiments on dropout, signal propagation, generalization, and compute-aware scheduling across MLPs, ResNets, and ViTs.</li>
+                <li>Designed robust aggregation experiments for adversarial multi-agent LLM debate under asymmetric information.</li>
+                <li>Extended mean-field and signal-propagation methods to residual networks and stable training at large depth.</li>
+                <li>Applied symmetry and EFT methods to gravitational systems, entropy constraints, and scale symmetry.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="when">Apr 2025-Dec 2026<br>Madrid, Spain</div>
+            <div>
+              <h3 class="item-title">Adjunct Lecturer</h3>
+              <p class="item-meta">Universidad de las Hesp&eacute;rides</p>
+              <ul>
+                <li>Designed and taught quantitative-finance mathematics modules covering linear algebra, differential calculus, ODE/PDE methods, and constrained optimization.</li>
+                <li>Developed Spanish ML lecture notes on data matrices, probability, PCA, SVD, least squares, Ridge/Lasso, logistic regression, cross-validation, and backpropagation.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="when">Jun-Aug 2024<br>Luxembourg</div>
+            <div>
+              <h3 class="item-title">Co-founder and Technical Lead</h3>
+              <p class="item-meta">SteamAI</p>
+              <ul>
+                <li>Built multivariate time-series forecasting and constrained-control models for refinery steam networks under stochastic demand.</li>
+                <li>Combined autoregressive demand modeling with pressure-constrained optimization to reduce vented steam.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-heading">
+          <h2>Selected Projects</h2>
+          <span class="section-tag">Applied Work</span>
+        </div>
+        <div class="research-stack">
+          <article class="research-card">
+            <h3>Football forecasting and backtesting</h3>
+            <p>
+              Built an end-to-end probabilistic forecasting pipeline using Understat xG/match data,
+              pandas/NumPy feature engineering, scikit-learn score models, and Monte Carlo season
+              simulations to compare expected-points forecasts with bookmaker-implied probabilities.
+            </p>
+          </article>
+          <article class="research-card">
+            <h3>Sequence modeling and QLoRA</h3>
+            <p>
+              Trained GRU, LSTM, and attention-based Transformer English-to-French translation models
+              in PyTorch, then fine-tuned Llama 2 7B with QLoRA on WMT 2015, improving BLEU from 1.6
+              to 13.6.
+            </p>
+          </article>
+          <article class="research-card">
+            <h3>Refinery steam optimization</h3>
+            <p>
+              Built multivariate time-series forecasting and constrained-control models for refinery
+              steam networks under stochastic demand, combining autoregressive demand modeling with
+              pressure-constrained optimization.
+            </p>
+          </article>
+          <article class="research-card">
+            <h3>Large-scale experimental workflows</h3>
+            <p>
+              Built reproducible Python workflows for training loops, hyperparameter sweeps, statistical
+              diagnostics, scaling analysis, convergence checks, and SLURM/HPC execution.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="publications">
+        <div class="section-heading">
+          <h2>Publications and Manuscripts</h2>
+          <span class="section-tag">Selected Work</span>
+        </div>
+        <div class="paper-list">
+          <article class="paper-card">
+            <p class="paper-meta">Lucas Fernandez Sarmiento · ICML 2026 · single-author</p>
+            <h3><a href="https://arxiv.org/abs/2605.21648" target="_blank" rel="noopener">Dropout Universality: Scaling Laws and Optimal Scheduling at the Edge-of-Chaos</a></h3>
+            <p>Develops a predictive theory of dropout, activation-dependent regime changes in neural-network dynamics, and compute-efficient generalization through optimal scheduling.</p>
+          </article>
+          <article class="paper-card">
+            <p class="paper-meta">Keltin Grimes, Lucas Fernandez-Sarmiento · under preparation</p>
+            <h3>Don&rsquo;t Debate, Interrogate! Robust AI Debate Despite Deceptive Agents</h3>
+            <p>Studies robust aggregation for multi-agent LLM systems under correlated, non-IID judge errors.</p>
+          </article>
+          <article class="paper-card">
+            <p class="paper-meta">Lucas Fernandez-Sarmiento, Sophie Merchant, Rupert Mitchell · under preparation</p>
+            <h3>Mean-Field Theory for ResNets: Depth-Dependent Residual Connections and Improved He Initialization</h3>
+            <p>Extends mean-field analysis to depth-dependent residual scaling and stable large-depth training.</p>
+          </article>
+          <article class="paper-card">
+            <p class="paper-meta">Lucas Fern&aacute;ndez-Sarmiento, Riccardo Penco, Rachel A. Rosen · accepted to JHEP</p>
+            <h3><a href="https://arxiv.org/abs/2508.14978" target="_blank" rel="noopener">On Entropy Bounds for Irrelevant Operators</a></h3>
+            <p>Investigates entropy-positivity constraints for low-energy effective theories and irrelevant deformations.</p>
+          </article>
+          <article class="paper-card">
+            <p class="paper-meta">Lucas Fern&aacute;ndez Sarmiento, Irvin Mart&iacute;nez Rodr&iacute;guez</p>
+            <h3><a href="https://arxiv.org/abs/2510.08778" target="_blank" rel="noopener">Broken Weyl Gravity: Dynamical Torsion and Generalized Proca</a></h3>
+            <p>Builds a symmetry-based construction of broken Weyl gravity and its connection to generalized Proca and vector torsion.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="presentations">
+        <div class="section-heading">
+          <h2>Presentations and Conferences</h2>
+          <span class="section-tag">Talks</span>
+        </div>
+        <div class="paper-list">
+          <article class="paper-card">
+            <p class="paper-meta">2026 · upcoming</p>
+            <h3>ICML 2026</h3>
+            <p>Scheduled to attend and present <em>Dropout Universality: Scaling Laws and Optimal Scheduling at the Edge-of-Chaos</em>.</p>
+          </article>
+          <article class="paper-card">
+            <p class="paper-meta">2026 · upcoming</p>
+            <h3>IAIFI Summer Workshop</h3>
+            <p>Expected presenter for work on dropout universality, signal propagation, and optimal scheduling.</p>
+          </article>
+          <article class="paper-card">
+            <p class="paper-meta">2025</p>
+            <h3>COSMO 2025 and Cargese BSM Summer School</h3>
+            <p>Presented physics research; also attended When QFT Meets QI, Contours 2026, and Amplitudes London 2026.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="section-heading">
+          <h2>Technical Skills</h2>
+          <span class="section-tag">Methods</span>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Quantitative Modeling</h3>
+            <p>Time-series forecasting, Monte Carlo simulation, stochastic processes, probabilistic modeling, backtesting, calibration, out-of-sample validation, bookmaker-implied probabilities, and credit-risk scoring.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Python and ML Stack</h3>
+            <p>Python, pandas, NumPy, scikit-learn, PyTorch, Hugging Face, asyncio, Git, and AWS.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Optimization and Decision Systems</h3>
+            <p>Convex and constrained optimization, projected gradient methods, no-regret learning, probabilistic opinion pooling, game theory, Markov games, MDPs, PPO, and multi-agent RL.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Scientific Computing</h3>
+            <p>Transformers, ResNets, ViTs, LSTMs, CNNs, LoRA/QLoRA, tensor networks, DMRG, SLURM/HPC cluster computing, Mathematica, MATLAB, and LaTeX.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Coursework</h3>
+            <p>CMU Machine Learning (10-701), CMU AI Agents (11-768), and Advanced Machine Learning and Game Theory (17-759).</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="honors">
+        <div class="section-heading">
+          <h2>Awards and Honors</h2>
+          <span class="section-tag">Recognition</span>
+        </div>
+        <div class="honor-list">
+          <div class="honor-row">
+            <span class="honor-year">2026-2027</span>
+            <span class="honor-name">CMU Presidential Fellowship, Mellon College of Science, funded by Tata Consultancy Services</span>
+          </div>
+          <div class="honor-row">
+            <span class="honor-year">2026</span>
+            <span class="honor-name">NSF ACCESS Compute Allocation, 200,000 ACCESS credits, approximately 2,000 H100 GPU-hours, PI</span>
+          </div>
+          <div class="honor-row">
+            <span class="honor-year">2025</span>
+            <span class="honor-name">CMU Professional Engagement Award</span>
+          </div>
+          <div class="honor-row">
+            <span class="honor-year">2023</span>
+            <span class="honor-name">Rafael del Pino Foundation Excellence Scholarship, $28,600</span>
+          </div>
+          <div class="honor-row">
+            <span class="honor-year">2021</span>
+            <span class="honor-name">UROP Bursary Prize, Imperial College London, approximately $3,000</span>
+          </div>
+          <div class="honor-row">
+            <span class="honor-year">2019, 2020</span>
+            <span class="honor-name">Dean&rsquo;s List, Imperial College London</span>
+          </div>
+          <div class="honor-row">
+            <span class="honor-year">2018</span>
+            <span class="honor-name">Finalist, Big Bang Young Scientist of the Year, UK</span>
+          </div>
+          <div class="honor-row">
+            <span class="honor-year">2017</span>
+            <span class="honor-name">Gold CREST Award, Jaguar Land Rover research</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-heading">
+          <h2>Contact</h2>
+          <span class="section-tag">Profiles</span>
+        </div>
+        <p>
+          Best entry points for research, academic, ML systems, and quant-tech conversations.
+          The full CV is included locally with this site.
+        </p>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="contact-label">Email</span>
+            <span><a href="mailto:lucasf@andrew.cmu.edu">lucasf@andrew.cmu.edu</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Phone</span>
+            <span><a href="tel:+14123300579">+1 412 330 0579</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Location</span>
+            <span>Pittsburgh, PA</span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">CV</span>
+            <span><a href="assets/lucas-fernandez-sarmiento-cv-may-2026.pdf">Lucas Fernandez Sarmiento CV</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">INSPIRE</span>
+            <span><a href="https://inspirehep.net/authors/2963953" target="_blank" rel="noopener">inspirehep.net/authors/2963953</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">ORCID</span>
+            <span><a href="https://orcid.org/0009-0005-3776-421X" target="_blank" rel="noopener">0009-0005-3776-421X</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Scholar</span>
+            <span><a href="https://scholar.google.com/citations?view_op=search_authors&amp;mauthors=Lucas+Fernandez+Sarmiento&amp;hl=en" target="_blank" rel="noopener">Google Scholar author search</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <span><a href="https://www.linkedin.com/in/lucasfernandezsarmiento" target="_blank" rel="noopener">linkedin.com/in/lucasfernandezsarmiento</a></span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    Lucas Fernandez Sarmiento · personal website · updated June 2026
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((link) => link.classList.remove("active"));
+        const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+        if (active) active.classList.add("active");
+      });
+    }, { rootMargin: "-25% 0px -62% 0px", threshold: 0 });
+
+    sections.forEach((section) => spy.observe(section));
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const target = document.querySelector(link.getAttribute("href"));
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  </script>
+</body>
+</html>
