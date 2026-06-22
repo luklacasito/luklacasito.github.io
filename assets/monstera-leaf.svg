@@ -1,47 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 320" role="img" aria-label="Monstera leaf silhouette">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="Monstera leaf silhouette">
   <defs>
-    <path id="leaf-shape" d="M130 25C111 5 77 11 51 42C18 82 15 138 34 185C50 226 80 251 103 274C116 287 124 303 130 315C136 303 144 287 157 274C180 251 210 226 226 185C245 138 242 82 209 42C183 11 149 5 130 25Z" />
-    <linearGradient id="leaf-fill" x1="50" y1="38" x2="210" y2="292" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#4b9a45" />
-      <stop offset="0.32" stop-color="#2f733b" />
-      <stop offset="0.70" stop-color="#17462a" />
-      <stop offset="1" stop-color="#0b2d1e" />
+    <path id="leaf-shape" d="M203 261C170 288 118 287 76 260C36 235 17 190 27 140C38 83 82 38 139 26C194 15 249 44 273 94C299 148 278 216 203 261Z" />
+    <linearGradient id="leaf-fill" x1="54" y1="34" x2="246" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#519847" />
+      <stop offset="0.34" stop-color="#2f743b" />
+      <stop offset="0.72" stop-color="#17482b" />
+      <stop offset="1" stop-color="#0a2d1d" />
     </linearGradient>
-    <radialGradient id="leaf-highlight" cx="38%" cy="24%" r="68%">
-      <stop offset="0" stop-color="#d5ed99" stop-opacity="0.55" />
-      <stop offset="0.32" stop-color="#7fb85a" stop-opacity="0.22" />
-      <stop offset="1" stop-color="#123a26" stop-opacity="0" />
+    <radialGradient id="leaf-highlight" cx="35%" cy="24%" r="72%">
+      <stop offset="0" stop-color="#d6ef99" stop-opacity="0.58" />
+      <stop offset="0.30" stop-color="#83ba5b" stop-opacity="0.25" />
+      <stop offset="1" stop-color="#103a25" stop-opacity="0" />
     </radialGradient>
     <mask id="leaf-cutouts" maskUnits="userSpaceOnUse">
-      <rect width="260" height="320" fill="black" />
+      <rect width="320" height="320" fill="black" />
       <use href="#leaf-shape" fill="white" />
 
-      <ellipse cx="40" cy="78" rx="9" ry="46" transform="rotate(60 40 78)" fill="black" />
-      <ellipse cx="28" cy="120" rx="11" ry="58" transform="rotate(78 28 120)" fill="black" />
-      <ellipse cx="34" cy="164" rx="11" ry="62" transform="rotate(98 34 164)" fill="black" />
-      <ellipse cx="54" cy="206" rx="10" ry="54" transform="rotate(117 54 206)" fill="black" />
-      <ellipse cx="79" cy="242" rx="8" ry="41" transform="rotate(135 79 242)" fill="black" />
+      <path d="M35 73C59 77 80 74 103 65" stroke="black" stroke-width="15" stroke-linecap="round" fill="none" />
+      <path d="M27 111C57 111 79 105 102 91" stroke="black" stroke-width="16" stroke-linecap="round" fill="none" />
+      <path d="M30 151C63 147 88 134 112 115" stroke="black" stroke-width="17" stroke-linecap="round" fill="none" />
+      <path d="M45 191C73 181 97 160 121 136" stroke="black" stroke-width="17" stroke-linecap="round" fill="none" />
+      <path d="M73 231C96 212 116 188 136 164" stroke="black" stroke-width="16" stroke-linecap="round" fill="none" />
 
-      <ellipse cx="220" cy="78" rx="9" ry="46" transform="rotate(-60 220 78)" fill="black" />
-      <ellipse cx="232" cy="120" rx="11" ry="58" transform="rotate(-78 232 120)" fill="black" />
-      <ellipse cx="226" cy="164" rx="11" ry="62" transform="rotate(-98 226 164)" fill="black" />
-      <ellipse cx="206" cy="206" rx="10" ry="54" transform="rotate(-117 206 206)" fill="black" />
-      <ellipse cx="181" cy="242" rx="8" ry="41" transform="rotate(-135 181 242)" fill="black" />
+      <path d="M263 84C237 90 214 92 190 88" stroke="black" stroke-width="15" stroke-linecap="round" fill="none" />
+      <path d="M280 123C249 124 224 116 199 103" stroke="black" stroke-width="16" stroke-linecap="round" fill="none" />
+      <path d="M279 163C246 157 222 142 196 124" stroke="black" stroke-width="17" stroke-linecap="round" fill="none" />
+      <path d="M259 204C231 190 209 169 185 146" stroke="black" stroke-width="17" stroke-linecap="round" fill="none" />
+      <path d="M224 242C207 221 191 198 172 171" stroke="black" stroke-width="16" stroke-linecap="round" fill="none" />
 
-      <ellipse cx="91" cy="92" rx="7" ry="22" transform="rotate(48 91 92)" fill="black" />
-      <ellipse cx="101" cy="135" rx="8" ry="28" transform="rotate(28 101 135)" fill="black" />
-      <ellipse cx="109" cy="182" rx="8" ry="26" transform="rotate(14 109 182)" fill="black" />
-      <ellipse cx="153" cy="92" rx="7" ry="22" transform="rotate(-48 153 92)" fill="black" />
-      <ellipse cx="161" cy="137" rx="8" ry="28" transform="rotate(-28 161 137)" fill="black" />
-      <ellipse cx="153" cy="185" rx="8" ry="26" transform="rotate(-12 153 185)" fill="black" />
-      <ellipse cx="130" cy="222" rx="7" ry="22" fill="black" />
+      <ellipse cx="137" cy="96" rx="6" ry="16" transform="rotate(43 137 96)" fill="black" />
+      <ellipse cx="156" cy="130" rx="7" ry="19" transform="rotate(35 156 130)" fill="black" />
+      <ellipse cx="176" cy="164" rx="7" ry="21" transform="rotate(27 176 164)" fill="black" />
+      <ellipse cx="193" cy="199" rx="6" ry="17" transform="rotate(22 193 199)" fill="black" />
+      <ellipse cx="124" cy="151" rx="6" ry="17" transform="rotate(37 124 151)" fill="black" />
+      <ellipse cx="143" cy="190" rx="6" ry="18" transform="rotate(31 143 190)" fill="black" />
     </mask>
   </defs>
+  <path d="M197 238C220 264 238 288 256 316" fill="none" stroke="#31512c" stroke-width="11" stroke-linecap="round" />
   <g mask="url(#leaf-cutouts)">
     <use href="#leaf-shape" fill="url(#leaf-fill)" />
     <use href="#leaf-shape" fill="url(#leaf-highlight)" />
-    <path d="M130 31C128 93 128 196 130 309" fill="none" stroke="#d6e99a" stroke-width="4.2" stroke-linecap="round" opacity="0.58" />
-    <path d="M130 61C112 75 91 86 65 91M130 84C105 108 77 126 42 132M130 112C100 143 72 164 45 186M130 146C110 176 93 207 82 243M130 62C148 75 170 87 196 92M130 86C155 109 183 127 218 133M130 113C160 144 188 164 215 186M130 148C150 178 167 209 178 244" fill="none" stroke="#d6e99a" stroke-width="2" stroke-linecap="round" opacity="0.35" />
-    <path d="M63 54C93 29 132 27 166 44" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.09" />
+    <path d="M72 48C118 86 160 159 199 237" fill="none" stroke="#d6ea93" stroke-width="5" stroke-linecap="round" opacity="0.58" />
+    <path d="M90 67C80 88 66 104 48 119M112 89C92 115 67 134 38 150M132 113C106 145 80 169 54 198M151 141C131 168 110 199 91 233M132 88C164 91 194 92 229 80M151 111C184 124 215 136 254 131M166 134C196 153 222 171 251 197M181 165C200 190 218 215 233 242" fill="none" stroke="#d6ea93" stroke-width="2" stroke-linecap="round" opacity="0.34" />
+    <path d="M68 55C104 30 158 25 203 44" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.08" />
   </g>
 </svg>
