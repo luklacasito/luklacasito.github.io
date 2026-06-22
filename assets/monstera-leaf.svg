@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 340" role="img" aria-label="Monstera leaf silhouette">
+  <defs>
+    <path id="leaf-shape" d="M130 24C107 6 76 21 53 51C26 86 18 128 30 171C42 216 68 250 98 276C113 289 122 309 130 326C138 309 147 289 162 276C194 249 220 213 231 171C243 126 235 84 207 51C184 22 153 6 130 24Z" />
+    <linearGradient id="leaf-fill" x1="38" y1="48" x2="218" y2="303" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3f9549" />
+      <stop offset="0.34" stop-color="#1e5f35" />
+      <stop offset="0.68" stop-color="#123e28" />
+      <stop offset="1" stop-color="#09291d" />
+    </linearGradient>
+    <radialGradient id="leaf-gloss" cx="38%" cy="27%" r="67%">
+      <stop offset="0" stop-color="#c7e583" stop-opacity="0.76" />
+      <stop offset="0.26" stop-color="#6fb852" stop-opacity="0.42" />
+      <stop offset="0.58" stop-color="#1c5332" stop-opacity="0.10" />
+      <stop offset="1" stop-color="#061a12" stop-opacity="0" />
+    </radialGradient>
+    <mask id="leaf-cutouts" maskUnits="userSpaceOnUse">
+      <rect width="260" height="340" fill="black" />
+      <use href="#leaf-shape" fill="white" />
+      <ellipse cx="49" cy="92" rx="9" ry="42" transform="rotate(60 49 92)" fill="black" />
+      <ellipse cx="43" cy="136" rx="10" ry="50" transform="rotate(76 43 136)" fill="black" />
+      <ellipse cx="55" cy="184" rx="10" ry="50" transform="rotate(102 55 184)" fill="black" />
+      <ellipse cx="81" cy="235" rx="9" ry="39" transform="rotate(126 81 235)" fill="black" />
+      <ellipse cx="211" cy="92" rx="9" ry="42" transform="rotate(-60 211 92)" fill="black" />
+      <ellipse cx="218" cy="138" rx="10" ry="50" transform="rotate(-76 218 138)" fill="black" />
+      <ellipse cx="205" cy="184" rx="10" ry="50" transform="rotate(-101 205 184)" fill="black" />
+      <ellipse cx="178" cy="236" rx="9" ry="39" transform="rotate(-126 178 236)" fill="black" />
+      <ellipse cx="91" cy="116" rx="8" ry="20" transform="rotate(38 91 116)" fill="black" />
+      <ellipse cx="104" cy="164" rx="9" ry="24" transform="rotate(18 104 164)" fill="black" />
+      <ellipse cx="145" cy="112" rx="8" ry="20" transform="rotate(-34 145 112)" fill="black" />
+      <ellipse cx="158" cy="164" rx="9" ry="24" transform="rotate(-16 158 164)" fill="black" />
+      <ellipse cx="133" cy="218" rx="7" ry="19" transform="rotate(5 133 218)" fill="black" />
+    </mask>
+  </defs>
+  <g mask="url(#leaf-cutouts)">
+    <use href="#leaf-shape" fill="url(#leaf-fill)" />
+    <use href="#leaf-shape" fill="url(#leaf-gloss)" />
+    <path d="M34 141C73 120 104 88 130 24C157 89 188 121 226 141C193 150 159 150 130 326C101 151 68 150 34 141Z" fill="#0d2c20" opacity="0.18" />
+    <path d="M130 29C128 111 128 219 130 322" fill="none" stroke="#c9df8f" stroke-width="3.4" stroke-linecap="round" opacity="0.62" />
+    <path d="M130 68C109 84 84 96 59 101M130 92C102 118 78 136 45 145M130 124C104 151 78 176 55 207M130 160C111 183 99 211 88 250M130 72C151 87 177 98 202 102M130 98C157 122 183 139 215 148M130 128C158 155 183 180 206 207M130 161C149 188 161 216 172 251" fill="none" stroke="#c9df8f" stroke-width="1.7" stroke-linecap="round" opacity="0.38" />
+    <path d="M73 65C100 40 131 39 160 55" fill="none" stroke="#e6f0bf" stroke-width="7" stroke-linecap="round" opacity="0.15" />
+    <path d="M65 115C91 100 114 83 130 45" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.08" />
+  </g>
+</svg>

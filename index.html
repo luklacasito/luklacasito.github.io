@@ -143,53 +143,54 @@
 
     .monstera {
       position: absolute;
-      width: var(--leaf-w);
-      height: var(--leaf-h);
-      border-radius: 47% 53% 49% 51% / 62% 62% 38% 38%;
-      opacity: var(--leaf-opacity, 0.28);
+      width: var(--leaf-w, 220px);
+      height: auto;
+      opacity: var(--leaf-opacity, 0.26);
       transform: rotate(var(--leaf-rotate));
-      filter: drop-shadow(0 24px 36px rgba(4, 56, 34, 0.16));
-      background:
-        radial-gradient(ellipse at 28% 30%, rgba(231, 234, 208, 0.96) 0 12%, transparent 13%),
-        radial-gradient(ellipse at 68% 42%, rgba(231, 234, 208, 0.82) 0 13%, transparent 14%),
-        radial-gradient(ellipse at 45% 68%, rgba(231, 234, 208, 0.70) 0 9%, transparent 10%),
-        radial-gradient(ellipse at 23% 62%, transparent 0 9%, rgba(52, 125, 67, 0.82) 10%),
-        radial-gradient(ellipse at 77% 66%, transparent 0 10%, rgba(52, 125, 67, 0.84) 11%),
-        linear-gradient(92deg, rgba(231, 234, 208, 0.68) 0 7%, transparent 7.5% 100%),
-        linear-gradient(135deg, rgba(190, 205, 146, 0.42), rgba(30, 81, 42, 0.78));
-      clip-path: polygon(50% 0, 63% 9%, 77% 8%, 75% 23%, 92% 28%, 80% 43%, 98% 57%, 78% 64%, 85% 82%, 66% 77%, 50% 100%, 35% 78%, 16% 84%, 23% 65%, 3% 58%, 20% 44%, 8% 29%, 25% 23%, 22% 8%, 38% 10%);
+      transform-origin: 50% 62%;
+      filter:
+        drop-shadow(0 24px 36px rgba(4, 56, 34, 0.17))
+        saturate(1.05);
+      mix-blend-mode: multiply;
       animation: leaf-sway var(--leaf-speed, 18s) ease-in-out infinite alternate;
     }
 
-    .monstera::before {
-      content: "";
-      position: absolute;
-      left: 49%;
-      top: 8%;
-      width: 2px;
-      height: 82%;
-      border-radius: 999px;
-      background: rgba(231, 234, 208, 0.72);
-      transform: rotate(4deg);
+    .monstera-left {
+      --leaf-w: 255px;
+      --leaf-rotate: -19deg;
+      --leaf-speed: 20s;
+      --leaf-opacity: 0.31;
+      left: -78px;
+      top: 138px;
     }
 
-    .monstera-left {
-      --leaf-w: 220px;
-      --leaf-h: 282px;
-      --leaf-rotate: -18deg;
-      --leaf-speed: 20s;
-      left: -56px;
-      top: 152px;
+    .monstera-center {
+      --leaf-w: 205px;
+      --leaf-rotate: 11deg;
+      --leaf-speed: 23s;
+      --leaf-opacity: 0.22;
+      left: 68vw;
+      top: 92px;
+      animation-delay: -8s;
     }
 
     .monstera-right {
-      --leaf-w: 180px;
-      --leaf-h: 236px;
-      --leaf-rotate: 17deg;
+      --leaf-w: 238px;
+      --leaf-rotate: 16deg;
       --leaf-speed: 17s;
-      --leaf-opacity: 0.24;
-      right: 3vw;
-      top: 58svh;
+      --leaf-opacity: 0.27;
+      right: -58px;
+      top: 55svh;
+    }
+
+    .monstera-low {
+      --leaf-w: 190px;
+      --leaf-rotate: -9deg;
+      --leaf-speed: 19s;
+      --leaf-opacity: 0.18;
+      right: 24vw;
+      bottom: -44px;
+      animation-delay: -12s;
     }
 
     .material-wash {
@@ -1060,7 +1061,7 @@
       }
 
       .ambient-layers {
-        opacity: 0.68;
+        opacity: 0.72;
       }
 
       .gear-large {
@@ -1074,12 +1075,28 @@
       }
 
       .monstera-left {
-        left: -114px;
-        top: 96px;
+        --leaf-w: 216px;
+        left: -132px;
+        top: 102px;
+      }
+
+      .monstera-center {
+        --leaf-w: 154px;
+        left: auto;
+        right: -58px;
+        top: 520px;
       }
 
       .monstera-right {
-        right: -92px;
+        --leaf-w: 206px;
+        right: -128px;
+        top: 64svh;
+      }
+
+      .monstera-low {
+        --leaf-w: 150px;
+        right: 36vw;
+        bottom: -30px;
       }
     }
 
@@ -1201,8 +1218,10 @@
     <span class="gear gear-large"></span>
     <span class="gear gear-small"></span>
     <span class="gear gear-fine"></span>
-    <span class="monstera monstera-left"></span>
-    <span class="monstera monstera-right"></span>
+    <img class="monstera monstera-left" src="assets/monstera-leaf.svg" alt="" />
+    <img class="monstera monstera-center" src="assets/monstera-leaf.svg" alt="" />
+    <img class="monstera monstera-right" src="assets/monstera-leaf.svg" alt="" />
+    <img class="monstera monstera-low" src="assets/monstera-leaf.svg" alt="" />
     <span class="material-wash wood-wash"></span>
     <span class="material-wash metal-wash"></span>
   </div>
